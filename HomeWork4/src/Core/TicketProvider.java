@@ -31,6 +31,20 @@ public class TicketProvider {
      * @return список билетов
      * @throws RuntimeException
      */
+    public List<Ticket> getTickets(int routeNumber) throws RuntimeException {
+        return ticketRepo.readAll(routeNumber);
+    }
+
+    /**
+     * Метод обновления статуса билета
+     *
+     * @param ticket билет
+     * @return результат выполнения операции
+     */
+    public boolean updateTicketStatus(Ticket ticket) {
+        ticket.setValid(false);
+        return ticketRepo.update(ticket);
+    }
 
 
     /**

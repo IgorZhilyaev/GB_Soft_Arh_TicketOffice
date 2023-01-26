@@ -89,4 +89,11 @@ private boolean isValid;
         }
         return false;
     }
+
+    public void setValid(boolean b) {
+    }
+
+    public boolean getValid() {
+        return getValid();
+    }
 }
